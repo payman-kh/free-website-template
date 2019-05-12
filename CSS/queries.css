@@ -1,0 +1,318 @@
+@media only screen and (max-width: 1267px){
+    /* Steps Section */
+    .p-steps { font-size: 90%; }
+
+    .main-nav {
+        display: block; 
+        right: 5%;
+     }
+
+    /* section who */ 
+    .section-who figure {
+        padding-left: 5px;
+    }
+
+    .section-who img,
+    .section-who figcaption {
+        width: 100%;
+    }
+
+}
+
+
+/* big tablets to 1200 px. widths smaller than 1140px row (which we defined as our row width)*/
+@media only screen and (max-width: 1200px){   
+    .main-nav {
+        display: block; 
+        right: 5%;
+     }
+
+    .lame-box{
+        max-width: 100%;
+        padding: 0 2%;
+    }  
+    
+    .row { padding: 0 2%; }
+
+    /* Steps Section */
+    .steps-box:last-child { margin-top: 45px; }
+    .app-screen { width: 50%; }
+
+    /* Where we are section */
+    .icon-small { 
+        width: 23px;
+        margin-right: 3px;
+        }
+    .city-feature { font-size: 80%; }
+
+
+    /* Signup Section */
+    .plan-price { font-size: 200%; }
+}
+
+
+@media only screen and (max-width: 1161px){
+    .plan-box li { font-size: 90%; }
+    .main-nav { 
+        display: block; 
+        right: 5%;
+     }
+
+     .section-hot-imgs { height: calc(2*(100vh/3)); }
+
+     .hot-img-photo img { height: calc(100vh/3); }
+}
+
+
+@media only screen and (max-width: 1083px){
+    .col { 
+        width: 48%;
+        margin-left: 1px;
+        margin-right: 1px;
+     }
+
+    .main-nav { 
+        display: block; 
+        right: 5%;
+     }
+
+    /* steps section */
+    .works-step:last-of-type {
+       margin-bottom: 40px;
+    }
+
+
+    .section-signup .col:last-of-type {
+        margin-left: 0;
+    }
+
+    .section-who img,
+    .section-who figcaption {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 5%;
+    }
+
+}
+
+
+/* small tablets to big tablets: 768px to 1023px*/
+@media only screen and (max-width: 1023px){   
+    /* we defined all the font-sized with percents. now by setting a pixel font-size in the body, all those
+    font-sizes changes accordingly */
+    body { font-size: 18px; } 
+    section { padding: 60px 0; }
+
+    .main-nav { right: 5%; }
+
+    /* header */
+    .logo,
+    .logo-black { left: 5%; }
+
+    /* Feature Section*/
+    .main-nav { display: block; }
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;   
+    }
+
+    /* Steps Section */
+    .app-screen { 
+        width: 50%;
+        margin-top: 10px;
+     }
+
+    /* Where we are Section */
+    .icon-small { 
+        width: 17px;
+        margin-right: 3px;
+     }
+    .city-feature { font-size: 80%; }
+
+    .plan-box {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    /* Contact us Section */
+    .contact-form { width: 80%; }
+
+}
+
+
+@media only screen and (max-width: 897px){
+    /* header */
+
+    .lame-box { 
+        left: 50%;
+        width: 80%;
+     }
+    .lame-box h1 { font-size: 200%; }
+    .btn { font-size: 80%; }
+
+     /* steps section */
+     .btn-app img { height: 45px; }
+
+     .main-nav { display: block; }
+
+}
+
+@media only screen and (max-width: 850px){
+
+    /* header */
+    .main-nav {
+        display: block;
+        right: 2%;
+     }
+
+     .main-nav li { display: inline-block; }
+
+    .logo,
+    .logo-black { left: 2%; }
+
+    .section-customers .col {
+        padding-right: 5%;
+    }
+
+    .section-hot-imgs { height: calc((100vh/2)); }
+
+    .hot-img-photo img  { height: calc(100vh/4) }
+}
+
+/* 0 - 767 px wide, small phones to small tablets. 767 is the width of Ipad*/
+@media only screen and (max-width: 767px){   
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+
+    /* header */
+    .main-nav { display: none; }
+
+    .mobile-nav-icon { display: inline-block; }
+
+    .main-nav { 
+        float: left;
+        left: 18%;
+        margin-top: 20px;
+        margin-left: 25px;
+     }
+
+    .main-nav li { display: block; }
+
+    .main-nav li a:visited,
+    .main-nav li a:link {
+        display: block;
+        border: 0;
+        padding: 10px 0 10px 10px;
+        font-size: 100%;
+    }
+
+    .sticky .main-nav { margin-top: 10px; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: black;}
+
+    .row,
+    .lame-box { margin-right: 0; }
+    .col {
+        width: 100%;  /* the columns won't be side by side anymore. will be stacked */
+        margin: 0 0 4% 0;
+    }  
+
+    .section-signup .col { 
+        width: 50%;
+        padding-left: 5px;
+     }
+
+     .section-signup p { line-height: 10px; }
+
+    .section-about-us .col { width: 50%; }
+
+
+    h1 { font-size: 180%  }
+    h2 { font-size: 150%; }
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0;   
+    }
+
+
+    /* Steps Section */
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+    .app-screen {      
+        width: 60%;
+        padding-right: 25%;
+     }
+
+     .works-step div {
+        height: 40px;
+        width: 40px;
+        padding: 4px;
+        float: left;
+        font-size: 100%;
+    }
+
+    .steps-box:last-of-type { margin-left: 120px; }
+
+    .section-who .col { width: 50%; }
+}
+
+@media only screen and (max-width: 717px){
+    .section-who img {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 626px){
+    .steps-box:last-of-type { margin-left: 80px;}  
+    
+    .section-who img {
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    .section-who .col {
+        width: 100%;
+    }
+
+    .section-who figure {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 514px){   
+    .lame-box h1 { font-size: 160%; }
+    .steps-box:last-of-type { margin-left: 40px;}    
+    .section-about-us .col { width: 100%; }
+}
+
+
+/* 0 - 480 px wide, small phones like phon4, iphone5, ...  */
+@media only screen and (max-width: 480px){   
+    section { padding: 25px 0; }
+
+    .section-signup .col { width: 100%; }
+
+    .contact-form { width: 100%; }
+}
+
+
+/* height queries for the popup images */
+@media only screen and (max-height: 680px){
+    .mfp-container { margin-top: 40px; }
+}
+
+@media only screen and (max-height: 580px){
+    .mfp-container { margin-top: 80px; }
+}
+
+@media only screen and (max-height: 400px){
+    .mfp-container { margin-top: 100px; }
+}

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--this meta tag is essential for using CSS media queries-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="blah blah blah blah blah blah blah blah blah blah blah blah blsh"> <!-- this the description which is shown when your website pops up in search engine. the name
+                                            must be "description". this is very important for the Search Engine Optimization (SEO) -->
+
+    <!-- libraries for Swiper: http://idangero.us/swiper/  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./CSS/animate.css">
+    <link rel="stylesheet" href="./CSS/Grid.css">
+    <link rel="stylesheet" href="./CSS/ionicons.min.css">
+    <link rel="stylesheet" href="./CSS/magnific_popup.css">
+    <link rel="stylesheet" href="./CSS/queries.css">
+    <link rel="stylesheet" href="./CSS/normalize_css.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+
+    <title>let's lame!</title>
+</head>
+
+<body>
+    
+    <header>
+
+        <nav>
+            <div class="row">
+                <img class="logo" src="./images/test_logo.png" alt="LOGO">
+                <img class="logo-black" src="./images/test_logo_black.png" alt="LOGO">
+
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#" class="first-nav-el">????</a></li>
+                    <li><a href="#section-about-us">affiliations</a></li>
+                    <li><a href="#section-customers">customers</a></li>
+                    <li><a href="#section-who">Team</a></li>
+                    <li><a href="#section-signup">Signup</a></li>
+                </ul>
+
+                <a class="mobile-nav-icon js--mobile-nav-icon"> <i class="ion-navicon-round"></i> </a>  <!-- ionicons.com -->
+            </div>
+        </nav>
+
+        <div class="lame-box">
+            <h1> Let's get Lame and have fun! </h1>
+
+            <!-- colors of these buttons were picked from: https://flatuicolors.com/ -->
+            <a class="btn btn-full js--scroll-to-plans" href="#"> Let's go! </a>
+            &nbsp;<a class="btn btn-ghost js--scroll-to-features" href="#"> Not sure :( </a>
+        </div>
+
+    </header>
+
+    <section class="section-features js--section-features" id="feature-section">  <!-- the second class is made only for adjustments in jquery. not used in CSS -->
+        <div class="row">
+            <h2> 
+                <!-- &mdash; => large dash. these are called special characters -->
+                Germany is the best &mdash; unless you are a beer! 
+            </h2>  
+           
+           
+            <p class="long-copy">
+                Spokesman insisted the army did not seek power and Sudan's future would be decided by the protesters - but said the army would maintain public order.
+                Protesters are still out in Khartoum, fearing the coup leaders are too close to ousted ruler Omar al-Bashir. The military says it will not extradite Mr 
+                Bashir on war crimes charges.
+            </p>
+        </div>
+
+        <!-- 'typing animation' is done using typer.js: https://steven.codes/typerjs/ -->
+        <div class="row"> <!-- wp stands for waypoint since we use waypoint on these -->
+            <div class="col span-1-of-4 box">
+                <i class="ion-jet icon-big"></i> 
+                <h3>
+                    <span class="typer" id="main" data-words="Feature1!,Jets!" data-delay="100" data-deleteDelay="1000"></span>
+                    <span class="cursor" data-owner="main"></span>                   
+                </h3>
+                <p class="first-feature">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur. 
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-beer icon-big"></i>
+                <h3>
+                    <span class="typer" id="main" data-words="Feature2!,Beers!" data-delay="100" data-deleteDelay="1000"></span>
+                    <span class="cursor" data-owner="main"></span>
+                </h3>
+                <p class="second-feature">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur. 
+                </p>
+            </div>  
+            <div class="col span-1-of-4 box">
+                <i class="ion-heart icon-big"></i> 
+                <h3>
+                    <span class="typer" id="main" data-words="Feature3!,Hearts!" data-delay="100" data-deleteDelay="1000"></span>
+                    <span class="cursor" data-owner="main"></span>
+                </h3>
+                <p class="third-feature">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur.
+                </p>
+            </div>  
+            <div class="col span-1-of-4 box">
+                <i class="ion-key icon-big"></i>
+                <h3>
+                    <span class="typer" id="main" data-words="Feature4!,Keys!" data-delay="100" data-deleteDelay="1000"></span>
+                    <span class="cursor" data-owner="main"></span>
+                </h3>
+                <p class="forth-feature">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur.
+                </p>
+            </div>      
+        </div>
+
+    </section>
+
+    <section class="section-hot-imgs">
+        <ul class="hot-imgs clearfix"> 
+            <li>
+                <!--figure tag is a container which can hold image and caption-->
+                <figure class="hot-img-photo">
+                    <img class="first-hot" src="./images/img1.jpg" alt="hot img"> 
+                </figure>
+            </li>
+            <li>
+                <figure class="hot-img-photo">
+                    <img class="second-hot" src="./images/img2.jpg" alt="hot img">               
+                </figure>
+            </li>
+            <li>
+                <figure class="hot-img-photo">
+                    <img class="third-hot" src="./images/img3.jpg" alt="hot img"> 
+                    
+                </figure>
+            </li>
+            <li>
+                <figure class="hot-img-photo">
+                    <img class="forth-hot" src="./images/img5.jpg" alt="hot img">                 
+                </figure>
+            </li>
+        </ul>
+
+
+        <ul class="hot-imgs clearfix">
+                <li>
+                    <!--figure tag is a container which can hold image and caption-->
+                    <figure class="hot-img-photo">
+                        <img class="fifth-hot" src="./images/img6.jpg" alt="hot img">    
+                    </figure>
+                </li>
+                <li>
+                    <figure class="hot-img-photo">
+                        <img class="sixth-hot" src="./images/img7.jpg" alt="hot img">                       
+                    </figure>
+                </li>
+                <li>
+                    <figure class="hot-img-photo">
+                        <img class="seventh-hot" src="./images/img8.jpg" alt="hot img">                     
+                    </figure>
+                </li>
+                <li>
+                    <figure class="hot-img-photo">
+                        <img class="eighth-hot" src="./images/img9.jpg" alt="hot img">                        
+                    </figure>
+                </li>
+            </ul>
+    </section>
+
+    <section class="section-steps">
+        <div class="row">
+            <h2> get on board &mdash; it's as Simple as 1, 2, 3!</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 steps-box">
+                <img class="app-screen js--wp-2" src="./images/iphone.png" alt="our app of Iphoe">
+            </div>
+            <div class="col span-1-of-2 steps-box">
+                <div class="works-step">
+                    <div>1</div>
+                    <p class="p-steps"> Sign up and get laid, we do the rest for you! </p>
+                </div>
+                <div class="works-step">
+                    <div>2</div>
+                    <p class="p-steps"> Our App blah blah blah blah blah blah blah blah blah </p>
+                </div>
+                <div class="works-step">
+                    <div>3</div>
+                    <p class="p-steps"> Blah blah blah blah Trevor Noah blah blah blah blah</p>
+                </div>  
+                
+                <a href="#" class="btn-app"> <img src="./images/app-store.png" alt="App Store"></a>
+                <a href="#" class="btn-app"> <img src="./images/play-store.png" alt="Play Store"></a>
+            </div>            
+        </div>
+    </section>
+
+
+    <section class="section-about-us" id="section-about-us">
+        <div class="row">
+            <h2> Where we are? </h2>
+        </div>
+        
+        <div class="row js--wp-3">
+            <div class="col span-1-of-4 box">
+                <img src="./images/tehran.jpg" alt="Tehran">
+                <h3> Tehran </h3>
+                <div class="city-feature">
+                    <i class="ion-ios-person icon-small"></i>
+                    1000+ customers
+                </div>
+                <div class="city-feature">
+                    <i class="ion-happy icon-small"></i>
+                    1000+ lames
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@letslame_tehran</a>
+                </div>
+            </div>
+
+            <div class="col span-1-of-4 box">
+                <img src="./images/osnabrueck.jpg" alt="Osnabrueck">
+                <h3> Osnabrueck </h3>
+                <div class="city-feature">
+                    <i class="ion-ios-person icon-small"></i>
+                    10000+ customers
+                </div>
+                <div class="city-feature">
+                    <i class="ion-happy icon-small"></i>
+                    1500+ lames
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@letslame_osna</a>
+                </div>                
+            </div>
+
+            <div class="col span-1-of-4 box">
+                <img src="./images/helsinki.jpg" alt="Helsinki">
+                <h3> Helsinki </h3>
+                <div class="city-feature">
+                    <i class="ion-ios-person icon-small"></i>
+                    2000+ customers
+                </div>
+                <div class="city-feature">
+                    <i class="ion-happy icon-small"></i>
+                    500+ lames
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@letslame_helsinki</a>
+                </div>
+            </div>
+
+            <div class="col span-1-of-4 box">
+                <img src="./images/uhlaanbaatar.jpg" alt="Uhlaanbaatar">
+                <h3> Uhlaanbaatar </h3>
+                <div class="city-feature">
+                    <i class="ion-ios-person icon-small"></i>
+                    1000+ customers
+                </div>
+                <div class="city-feature">
+                    <i class="ion-happy icon-small"></i>
+                    9000+ lames
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@letslame_uhlan</a>
+                </div>
+            </div>  
+
+        </div>
+    </section>
+
+
+    <!-- the cool animation is made using SWIPER => http://idangero.us/swiper/ -->
+    <section class="section-customers" id="section-customers">
+        <div class="row">
+                <h2> what our customers babble... </h2>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="row swiper-wrapper">
+                <div class="swiper-slide col span 1-of-10">
+                    <blockquote>   <!-- this is for quotes -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                        dolore eu fugiat nulla pariatur.                       
+                            <cite><img src="./images/peter_griffin.jpg" alt="Peter Griffin"> Peter Griffin </cite>
+                    </blockquote> 
+                </div>
+                <div class="swiper-slide col span-2-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/mike_pence.jpg" alt="Mike Pence"> Mike Pence </cite>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide col span-3-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/stewie_griffin.jpg" alt="Mohammadali Jafari"> Stewie Griffin </cite>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide col span-4-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/donald_trump.jpg" alt="Mohammadali Jafari"> Donald J.Trump </cite>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide col span-5-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/lois_griffin.jpg" alt="Mohammadali Jafari"> Lois Griffin </cite>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide col span-6-of-10">
+                        <blockquote>   
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                                dolore eu fugiat nulla pariatur.
+                                <cite><img src="./images/scott_pruitt.jpg" alt="Mohammadali Jafari"> Scott Pruitt </cite>
+                        </blockquote>
+                </div>
+                <div class="swiper-slide col span-7-of-10">
+                  <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/quagmire.jpg" alt="Mohammadali Jafari"> Glemm Quagmire  </cite>
+                    </blockquote>     
+                </div>
+                <div class="swiper-slide col span-8-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/mitt_romney.jpg" alt="Mohammadali Jafari"> Mitt Romney </cite>
+                    </blockquote>   
+                </div>
+                <div class="swiper-slide col span-9-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/adam_west.jpg" alt="Mohammadali Jafari"> Adam West </cite>
+                    </blockquote>   
+                </div>
+                <div class="swiper-slide col span-10-of-10">
+                    <blockquote>   
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur.
+                            <cite><img src="./images/paul_ryan.jpg" alt="Mohammadali Jafari"> Paul Ryan </cite>
+                    </blockquote>                       
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
+
+    <section class="section-signup js--section-signup" id="section-signup">
+            <div class="row">
+                <h2> Signup now and be eternally Lame! </h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="plan-box js--wp-4">
+                        <div>
+                            <h3> Premium </h3>
+                            <p class="plan-price"> $6.99 <span> / month </span> </p>
+                            <p class="plan-price-extra"> +$1.99 extras </p>                           
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> Free Delivery </li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> 24/7 Support</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> Unlimited access </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full"> Sign Up! </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3> Freemium </h3>
+                            <p class="plan-price"> $1.99 <span> / month </span> </p> <!-- when something is inside span tag, it can be styled differently from its parent tag -->
+                            <p class="plan-price-extra"> +$1.99 extras </p>          <!-- so here the text which is inside span tag can have a different style than the rest of -->                  
+                        </div>                                                       <!-- the paragraph -->
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-close-empty icon-small"></i> Free Delivery </li>
+                                <li><i class="ion-ios-close-empty icon-small"></i> 24/7 Support</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> Unlimited access </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full"> Sign Up! </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3> Treemium </h3>
+                            <p class="plan-price"> $0.00  <span> / month </span> </p> 
+                            <p class="plan-price">   </p>
+                            <p class="plan-price-extra"> pay as you go </p>                           
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> Free Delivery </li>
+                                <li><i class="ion-ios-close-empty icon-small"></i> 24/7 Support</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i> Unlimited access </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="./signup_form.html" target="_blank" class="btn btn-full"> Sign Up! </a>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+    </section>
+
+    <section class="section-contact-form">
+            <div class="row">
+                <h2> Contuct us lamely! </h2>
+            </div> 
+            
+            <div class="row">
+                <form class="contact-form" method="post" action="#">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends">Friends</option>
+                                <option value="internet" selected>Internet</option>
+                                <option value="ads">Ads</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>                     
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Subscribe:</label> <!-- "for" attribute does not work with "checkbox" -->
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="subscribe" id="subscribe" checked> I'm in!
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label >feedback:</label> <!-- "for" attribute does not work with "textarea" -->
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="feedback" placeholder="what is on your mind?"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp;</label>  <!-- we want the submitt button to be aligned with other input fields -->
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="submit" value="Submit">
+                            </div>
+                    </div>
+                </form>
+            </div>
+
+    </section>
+ 
+    <section  class="section-who" id="section-who">
+        <div class="row">
+            <h2> Our team </h2>
+        </div>    
+        <div class="row js--authors">
+                <div class="author col span-1-of-4">
+                    <figure class="who-image">
+                       <a href="./images/peyman_kheiri.jpg"><img src="./images/peyman_kheiri.jpg" alt="Peyman Kheiri"></a> 
+                        <figcaption>Peyman Kheiri</figcaption>
+                    </figure>
+                </div>
+                <div class="author col span-1-of-4">
+                    <figure class="who-image">
+                        <a href="./images/jason_vorhees.jpg"><img src="./images/jason_vorhees.jpg" alt="Jason Vorhees"></a>
+                        <figcaption>Jason Vorhees</figcaption>
+                    </figure>                   
+                </div>
+                <div class="author col span-1-of-4">
+                    <figure class="who-image">
+                        <a href="./images/freddy_krueger.jpg"><img src="./images/freddy_krueger.jpg" alt="Freddy Krueger"></a>
+                        <figcaption>Freddy Krueger</figcaption>
+                    </figure>              
+                </div>
+                <div class="author col span-1-of-4">
+                    <figure class="who-image">
+                       <a href="./images/Headless_Horseman.jpg"><img src="./images/Headless_Horseman.jpg" alt="Headless Horseman"></a>
+                       <figcaption>Headless Horseman</figcaption>
+                    </figure>                  
+                </div>                
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav"> 
+                    <li><a href="#section-who">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <!-- https://ionicons.com -->
+                    <li><a href="#"> <i class="ion-social-facebook"></i> </a></li>
+                    <li><a href="#"> <i class="ion-social-twitter"></i> </a></li>
+                    <li><a href="#"> <i class="ion-social-googleplus"></i> </a></li>
+                    <li><a href="#"> <i class="ion-social-instagram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>
+                Copyright &copy; 2019 by LetsLame. 95.5% of rights reserved.
+            </p>
+        </div>
+    </footer>
+  
+    
+     <!-- Jquery library: https://developers.google.com/speed/libraries/#jquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <!-- typer.js: https://steven.codes/typerjs/-->
+     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+     <!-- THESE CODES ARE TAKEN FROM:  https://www.jsdelivr.com -->
+     <!-- JS code for making our code compatible to older browser versions -->
+     <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+     <!-- emulates CSS pseudo classes in older versions of the Internet Explorer -->
+     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>       
+     <script src="JS/index.js"></script>
+     <script src="JS/jquery.js"></script>
+     <script src="JS/jquery.waypoints.min.js"></script>
+     <script src="JS/magnific_popup.js"></script>
+</body>
+
+<!-- VALIDATE YOUR FINAL HTML FILE (CHECK FOR ALL ERRORS / WARNINGS) HERE: https://validator.w3.org/#validate_by_input-->
+</html>

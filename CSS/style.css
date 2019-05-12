@@ -1,0 +1,846 @@
+/**************************************************************/
+/* BASIC SETUP*/
+/**************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:focus { outline: none; }
+
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; 
+    background-color: #fff;
+    color: #555;
+    overflow-x: hidden;
+}
+
+
+/* a class for clearing (or maybe cutting) the "float" property from previous elements. so the next element does not follow the
+float. it is usually called "clearfix"*/
+.clearfix {  zoom: 1; }
+
+.clearfix:after {
+    content: "";
+    clear: both;   /* clears the float from both sides. other options are "left" and "right" */
+    display: block;  
+    height: 0; 
+    visibility: hidden;
+}
+
+/**************************************************************/
+/* REUSABLE COMPONENTS*/
+/**************************************************************/
+.row {
+    max-width: 100vw;
+    margin: 0 auto;   /* that means: 0 auto 0 auto*/
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+section {
+    padding: 60px 0;
+}
+
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;  /*top right bottom left*/
+    font-size: 240%;
+    word-spacing: 3px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 100%;
+    margin-bottom: 15px;
+}
+
+h3 .typer { 
+    color: inherit !important; 
+}
+
+/* a line after h2. these are called pseudo classes */
+h2:after {
+    display: block;  /* so it takes the full width */
+    height: 2px;
+    content: "";
+    width: calc( 100vw / 2 );
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #e67e22;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: orange;
+    border-bottom: 1px solid orange;   /* add a custom line below the link instead of the default one  */
+    padding-bottom: 1px;
+    
+}
+
+a:hover {
+    color: #555;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom .2s, color .2s;
+    transition: border-bottom .2s, color .2s;
+}
+
+/*------------ICONS-------------*/
+/*those icons are actually fonts. so they are treated like fonts*/
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: orange;
+}
+
+/* icons used in the "about us" section */
+.icon-small {
+    display: inline-block;   /* by setting this attribute, they are inline (can be placed next to other elements) and adjustible */
+    width: 30px;
+    text-align: center;
+    color: orange;
+    font-size: 120%;  /* ionicons are fonts. by setting the font-size we can change their size*/
+    margin-right: 5px;
+
+    /* secrets to align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -2px;   /* a negative margin removes the space */
+
+}
+
+/*-------- PARAGRAPHS ----------*/
+.box {
+    padding: 1%;
+}
+
+.box p {
+    text-align: justify;
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;   /* we want the text to be centerted. 70% belongs to the "width" property now. 
+                           so when the remaining 30 percent is distributed between the two sides, the text is centered  */
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+
+/******** BUTTONS *********/
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;    /* by using this we can position the buttons side by side and change their sizes*/
+    padding: 10px 30px;       /* 10 30 10 30 */
+    font-weight: 300;
+    text-decoration: none;   /* get rid of the underline (a tag default) */
+    color: white;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;  /* background color of these buttons will change with a .2s transitions 
+                                        (if the color change is implemented in one of the states (hover or active) */
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #f39c12;
+    border: 1px solid #f39c12;
+}
+
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #00a8ff
+}
+
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #22a6b3;
+    border-color: #22a6b3;
+}
+
+
+
+/**************************************************************/
+/* HEADER */
+/**************************************************************/
+header{
+    height: 90vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), 
+                      url('../images/bikini-background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('../images/bikini-background.jpg'); /*this is overlaying the image with a color*/                
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.header-background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 110%;
+    width: auto; 
+    height: auto; 
+    background: black;     
+    margin-bottom: 14.5%;
+}
+
+
+.lame-box{
+    position: absolute;
+    max-width: 1140px;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.lame-box h1 {
+    margin-bottom: 10px;
+    color: rgb(238, 217, 217);
+}
+
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    position: absolute;
+    left: 10%;
+    margin: -4px 0;
+}
+
+.logo-black { 
+    height: 65px;
+    width: auto;
+    float: left;
+    position: absolute;
+    left: 10%;
+    display: none; 
+    margin: -4px 0;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;  /* get rid of the bullet points of ul */
+    position: relative;
+    margin-top: 30px;
+    right: 10%;
+    z-index: 5;
+}
+
+/* this class will be toggled on the ul. The reason I add this class is that when we use ".slideToggle()" on an element (see jquery.js), it
+ adds an inline "display: block" to that element. so after resizing the window, the navbar remain invisible. by adding an forced 
+ "display: block" we make sure it is always visible */
+.ul-display-block { display: block !important;}
+
+.main-nav li {
+    display: inline-block;   /* li elements appear next to each other */
+    margin-right: 15px;    /* space between elements */
+}
+
+.main-nav li a:link,
+ .main-nav li a:visited {
+    padding: 2px 6px; 
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;     /* 90 percent of the 20px defined in html tag*/
+    -webkit-transition: border-bottom 0.4s;
+    transition: border-bottom 0.4s;  
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:active, 
+ .main-nav li a:hover { 
+    border-bottom: 2px solid #22a6b3;
+}
+
+
+/* Mobile navigation bar */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 0;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: white;
+}
+
+/* sticky navigation bar */
+.sticky {
+    position: fixed;    /* another option would be => position: sticky.  check the difference here:
+                           https://www.w3schools.com/cssref/pr_class_position.asp */
+    top: 0; 
+    width: 100%;
+    float: right;     
+    background: rgba(255, 255, 255, 0.87);
+    -webkit-box-shadow: 0 2px 2px rgb(214, 212, 212);
+            box-shadow: 0 2px 2px rgb(214, 212, 212);
+    z-index: 9999;   /* position on the z-axis. 9999 is the maximum allowed. now all other elements go below this*/          
+}
+
+.sticky .main-nav { margin: 15px 0; }
+.sticky .main-nav li:first-of-type { display: none; } /* first-nav-el */
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 6px; 
+    color: rgb(105, 103, 103);
+    font-size: 70%;
+}
+
+
+.sticky .logo-black { display: block; }
+
+.sticky .logo { display: none; }
+
+/**************************************************************/
+/* FEATURE SECTION */
+/**************************************************************/
+.section-features {
+    margin-right: 10%;   /*top right bottom left*/
+    margin-left: 10%;
+}
+
+.first-feature:hover,
+.second-feature:hover,
+.third-feature:hover,
+.forth-feature:hover {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.first-feature:hover {
+    background-image: url('../images/jet.jpg');
+}
+
+.second-feature:hover {
+    background-image: url('../images/beer.jpg');
+}
+
+.third-feature:hover {
+    background-image: url('../images/heart.jpg');
+}
+
+.forth-feature:hover {
+    background-image: url('../images/key.png');
+}
+
+
+/**************************************************************/
+/* HOT IMAGE SECTION */
+/**************************************************************/
+.section-hot-imgs {
+    padding-top: 0;
+    height: 100vh;
+}
+
+.hot-imgs {
+    list-style: none;
+    width: 100%;  
+}
+
+.hot-imgs li {
+    display: block;
+    float: left;   /* can only be used with display:block */
+    width: 25%;
+}
+
+.hot-img-photo {
+    width: 100%;  /* this means it has the exact width of its parent element. 100% 
+                     of the li element which has in turn 25% of its parent width  */
+    margin: 0;
+    overflow: hidden;    /* we are using the transform: scale() attribute to zoom in the images. but this make them bigger
+    than their container div (hot-img-photo) and so they ovwerflow. the images go beyond their container borders. by setting
+    the overflow to hidden, the overflowed areas of the images get hidden. so it is like there are no overflows*/
+    background-color: black;
+}
+
+.hot-img-photo:hover {
+    background-color: white;
+}
+
+.hot-img-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: calc(100vh/2);
+    -webkit-transform:  scale(1.15);
+            transform:  scale(1.15);    /* zooms the image */
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+
+.hot-img-photo img:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    opacity: 1;
+}
+
+
+/**************************************************************/
+/* SECTION STEPS */
+/**************************************************************/
+.section-steps {
+    background-color: rgb(238, 224, 224);
+}
+
+.section-steps a {
+    border-bottom: none;
+}
+
+.steps-box:first-child {
+    text-align: right;    /* doesn't just work for text. works for any inline element */
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen { width: 40%; }
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 60px;
+}
+
+.works-step div {
+    color: orange;
+    border: 2px solid orange;
+    /*display: inline-block;*/
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 2%;
+}
+
+.p-steps {
+    padding-top: 1.5%;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+}
+
+
+.section-steps .row:last-child{
+    margin-right: 10%;
+}
+
+
+/**************************************************************/
+/* SECTION ABOUT US */
+/**************************************************************/
+.section-about-us {
+    margin: 5% 10% 5% 10%; /*top right bottom left*/
+}
+
+.box img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+    font-size: 90%;
+}
+
+/**************************************************************/
+/* SECTION CUSTOMERS */
+/**************************************************************/
+.section-customers {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), 
+                url('../images/fans-love.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/fans-love.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-attachment: fixed;  /* background image stays fixed as we scroll the page */
+}
+
+blockquote {      /* each class is the parent to its pseudo classes. this class is the parnt to :before class */
+    text-align: justify;
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {  /* a pseudo-class for defining/adding something right before the class (or before the tag) */
+    content: "\201C";     /*this the left-sided quotation glyph. taken from here => https://css-tricks.com/snippets/html/glyphs/ */
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+cite {
+    display: block;
+    font-size: 90%;
+    margin-top: 20px
+}
+
+
+cite img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .swiper-wrapper {
+    -webkit-transform: translate3d(-6350.25px, 0px, 0px);
+            transform: translate3d(-6350.25px, 0px, 0px); -webkit-transition-duration: 0ms; transition-duration: 0ms;
+  }
+
+
+/**************************************************************/
+/* SECTION SIGNUP*/
+/**************************************************************/
+.section-signup {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(219, 205, 205);
+}
+
+.section-signup .row {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.plan-box {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;  /* 90 percent of the parent box */
+    margin-left: 5%;   /* the remaining 10 percent (look above) divided by two. so the content is centered */
+    -webkit-box-shadow: 0 2px 2px rgb(243, 243, 243);
+            box-shadow: 0 2px 2px rgb(243, 243, 243);
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid rgb(235, 232, 232);
+    /* when we assign a color to the first child, the top border radius is gone (don't really know why). se we assign it again here */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.plan-box div:first-child {
+    background-color: rgb(241, 234, 234);
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: none;
+}
+
+.plan-price {
+    font-size: 250%;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.plan-price span {
+    font-size: 30%;  /* 30% of the 300% defined in the parent node */
+    font-weight: 300;
+}
+
+.plan-price-extra {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+
+/**************************************************************/
+/* SECTION CONTACT */
+/**************************************************************/   
+.section-contact-form {
+    padding-left: 10%;
+    padding-right: 10%;   
+
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;  /* this centers the content */
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+/**************************************************************/
+/* SECTION WHO */
+/****************
+**********************************************/
+.section-who {
+    padding: 5% 10% 8% 10%; /*top right bottom left*/
+    background-color: rgb(219, 205, 205);   
+}
+
+.section-who a {
+    border-bottom: none;
+}
+
+.author {
+    cursor: pointer;
+}
+.section-who figure {
+    padding-left: 10px;
+}
+
+.section-who img {
+    height: 250px;
+    margin-bottom: -4px;  
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+.section-who figcaption {
+    background-color: rgb(68, 67, 67);
+    color: white;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; 
+    border: 1px solid rgb(68, 67, 67);;
+}
+
+/* magnific-popup attributes*/
+.mfp-container {
+    top: -10% !important;
+}
+
+.mfp-img {
+    height: 500px !important;
+    width: auto !important;
+    padding: 40px 0 38px !important;
+}
+
+.mfp-title {
+    color:white !important; 
+    font-size: 80%;
+}
+
+.mfp-title p {
+    text-align: justify !important;
+}
+
+/**************************************************************/
+/* FOOTER */
+/**************************************************************/
+footer {
+    padding: 20px 10% 70px 10%;      /*top right bottom left*/
+    background-color: #333;
+    font-size: 80%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.footer-nav {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nave li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+footer li a:link,
+footer li a:visited {
+    color: rgb(190, 188, 188);
+    text-decoration: none;
+    border-bottom: none;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+    
+
+footer li a:hover,
+footer li a:active {
+    color: rgb(236, 231, 231);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 150%;
+}
+
+
+/* when we define color here again, the transition we defined above in "footer li a" is overwritten. we need to define it again */
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color .5s;
+    transition: color .5s;
+}
+
+/* get social media colors here => https://www.designpieces.com/2012/12/social-media-colours-hex-and-rgb/ */
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+.ion-social-twitter:hover {
+    color: #55acee
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39
+}
+
+.ion-social-instagram:hover {
+    color: #4c68d7
+}
+
+footer p {
+    color: rgb(117, 115, 115);
+}
+
+
+/**************************************************************/
+/* ANIMATIONS (on scroll) */
+/**************************************************************/
+/* we want these elements to be invisible and appear with the animation */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+ {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1 { -webkit-animation-duration: 1s; animation-duration: 1s; }
+
+/* as you can see there is no space between the name of the two classes here.
+that means 'when the element has the two classes at the same time'. when we 
+put a space between the names of the two classes like this ".js--wp-1 .animated"
+that means the second class is inside the first class*/
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated 
+ {
+    opacity: 1;
+}
+
+
