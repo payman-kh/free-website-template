@@ -14,3 +14,5 @@ Some screenshots of the project:
 [Screenshot 3](screenshots/screenshot-3-scaled.png)
 
 [Screenshot 4](screenshots/screenshot-4-scaled.png)
+
+[Screenshot 4](screenshots/screenshot-5-scaled.png)
